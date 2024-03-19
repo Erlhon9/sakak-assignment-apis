@@ -1,8 +1,11 @@
-from django.core.management.base import BaseCommand
-import pandas as pd
-from nutrients.models import FoodNutrientFact
-from django.db import transaction
 import warnings
+
+import pandas as pd
+from django.core.management.base import BaseCommand
+from django.db import transaction
+
+from nutrients.models import FoodNutrientFact
+
 warnings.filterwarnings("ignore")
 
 from django_project.settings.base import FILE_PATH
@@ -14,7 +17,7 @@ class Command(BaseCommand):
         data_file = FILE_PATH / file_name
 
         df = pd.read_excel(data_file)
-    
+
         with transaction.atomic():
             # TODO: '1g 미만' 처리하기
             FoodNutrientFact.objects.bulk_create([

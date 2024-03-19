@@ -18,6 +18,6 @@ class FoodNutrientFact(models.Model):
     cholesterol = models.FloatField(help_text='콜레스테롤(mg)(1회제공량당)')
     saturated_fatty_acids = models.FloatField(help_text='포화지방산(g)(1회제공량당)')
     trans_fat = models.FloatField(help_text='트랜스지방(g)(1회제공량당)')
-    
+
     def __str__(self):
         return self.food_name

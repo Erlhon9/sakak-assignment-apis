@@ -8,7 +8,7 @@
 
 ## 설치 및 실행 방법
 
-### 1. 설치 
+### 1. 설치
 
 프로젝트는 [poetry](https://python-poetry.org/docs/)를 사용하여 관리되고 있습니다.
 
