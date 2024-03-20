@@ -2,6 +2,7 @@ version: "3.9"
 
 services:
   postgres:
+    container_name: nutrient-postgres
     image: postgres:16
     restart: always
     volumes:
@@ -14,6 +15,7 @@ services:
       POSTGRES_DB: nutrient
 
   api:
+    container_name: nutrient-api
     restart: "no"
     build:
       dockerfile: Dockerfile
