@@ -4,6 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Erlhon9 <hongsbus@gmail.com>"]
 readme = "README.md"
+packages = [{include = "django_project"}]
 
 [tool.poetry.dependencies]
 python = "^3.12"
@@ -17,7 +18,14 @@ pre-commit = "^3.6.2"
 black = "^24.3.0"
 isort = "^5.13.2"
 flake8 = "^7.0.0"
+model-bakery = "^1.17.0"
+pytest-cov = "^4.1.0"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "django_project.settings.local"
+python_files = ["tests.py"]
+addopts = "-vv -x --lf -s"
