@@ -71,3 +71,7 @@ poetry install
     # 초기 데이터 마이그레이션
     poetry run python3 manage.py task_migrate_data
     ```
+
+## 3. API 문서
+
+- API 문서는 서버실행 이후 [Swagger](http://localhost:8000/swagger/)를 통해 확인할 수 있습니다.
