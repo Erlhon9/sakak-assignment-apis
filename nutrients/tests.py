@@ -1,4 +1,5 @@
 import json
+from re import L
 from urllib import response
 import pytest
 from django.contrib.auth.models import User
@@ -104,3 +105,20 @@ class TestFoodNutrientFact:
         
         assert response.status_code == 204
         assert not FoodNutrientFact.objects.filter(id=food.id).exists()
+        
+    def test_query(self, api_client):
+        for i in range(15):
+            baker.make(
+                FoodNutrientFact, 
+                _quantity=10,
+                food_name=f"test_{i}",
+            )
+        
+        # http://localhost:8000/api/nutrients/query?food_name=test_5 과 동일
+        response = api_client.get(
+            "/api/nutrients/query",
+            data={"food_name": "test_5"},
+        )
+        
+        assert response.status_code == 200
+        assert len(response.data) == 10
