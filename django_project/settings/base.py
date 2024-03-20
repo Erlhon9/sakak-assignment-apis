@@ -15,6 +15,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "nutrients.apps.NutrientsConfig",
+    "django_filters",
 ]
 
 MIDDLEWARE = [
