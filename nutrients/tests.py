@@ -1,10 +1,7 @@
 import json
-from re import L
-from urllib import response
 import pytest
-from django.contrib.auth.models import User
 from model_bakery import baker
-from rest_framework.test import APIClient, APITestCase
+from rest_framework.test import APIClient
 
 from nutrients.models import FoodNutrientFact
 
