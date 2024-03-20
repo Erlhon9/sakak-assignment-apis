@@ -28,6 +28,6 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
-DJANGO_SETTINGS_MODULE = "django_project.settings.local"
+DJANGO_SETTINGS_MODULE = "django_project.settings.test"
 python_files = ["tests.py"]
 addopts = "-vv -x --lf -s"
