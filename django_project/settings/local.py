@@ -1,5 +1,4 @@
 from .base import *  # noqa: F403, F401
-import os
 
 DATABASES = {
     "default": {
@@ -11,5 +10,7 @@ DATABASES = {
         "PORT": "5432",
     }
 }
+
+INSTALLED_APPS += ["drf_yasg"]
 
 DEBUG = True
