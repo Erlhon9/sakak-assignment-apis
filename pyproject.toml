@@ -20,6 +20,7 @@ isort = "^5.13.2"
 flake8 = "^7.0.0"
 model-bakery = "^1.17.0"
 pytest-cov = "^4.1.0"
+django-filter = "^24.1"
 
 [build-system]
 requires = ["poetry-core"]
