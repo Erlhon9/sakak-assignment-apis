@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16
+    restart: always
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: XLKyXGsWY5DzFqfXQWHYtUzXbFwQROjV
+      POSTGRES_DB: nutrient
+
+  api:
+    restart: "no"
+    build:
+      dockerfile: Dockerfile
+      args:
+        - DJANGO_SETTINGS_MODULE=django_project.settings.docker
+    volumes:
+      - ./api:/usr/src/app/
+    command: poetry run python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    working_dir: /app
+    depends_on:
+      - postgres
+
+  

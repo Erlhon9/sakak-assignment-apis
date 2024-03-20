@@ -21,12 +21,13 @@ flake8 = "^7.0.0"
 model-bakery = "^1.17.0"
 pytest-cov = "^4.1.0"
 django-filter = "^24.1"
+psycopg2 = "^2.9.9"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
-DJANGO_SETTINGS_MODULE = "django_project.settings.local"
+DJANGO_SETTINGS_MODULE = "django_project.settings.test"
 python_files = ["tests.py"]
 addopts = "-vv -x --lf -s"

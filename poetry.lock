@@ -552,9 +552,6 @@ pyyaml = ">=5.1"
 virtualenv = ">=20.10.0"
 
 [[package]]
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 name = "psycopg2"
 version = "2.9.9"
 description = "psycopg2 - Python-PostgreSQL Database Adapter"
@@ -577,9 +574,6 @@ files = [
 ]
 
 [[package]]
-=======
->>>>>>> 9c6d091 ([Feature]Create Food Nutrient Fact CRUD (#1))
->>>>>>> 0fc9efa ([Feature]Create Food Nutrient Fact CRUD (#1))
 name = "pycodestyle"
 version = "2.11.1"
 description = "Python style guide checker"
@@ -819,12 +813,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-<<<<<<< HEAD
-content-hash = "c37760895bce0141c66340f96d035de0bb27e2657091b9dd587df94ed44be6bd"
-=======
-<<<<<<< HEAD
 content-hash = "44bb831162e453aa8face31b81c2b05d9e64bcd3aa90d2d1decf5cb4673bd1c0"
-=======
-content-hash = "c37760895bce0141c66340f96d035de0bb27e2657091b9dd587df94ed44be6bd"
->>>>>>> 9c6d091 ([Feature]Create Food Nutrient Fact CRUD (#1))
->>>>>>> 0fc9efa ([Feature]Create Food Nutrient Fact CRUD (#1))
